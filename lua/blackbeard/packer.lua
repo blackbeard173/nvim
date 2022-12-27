@@ -18,7 +18,9 @@ vim.cmd([[
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup({ function(use)
+local _, packer = pcall(require, "packer")
+
+packer.startup({ function(use)
     use 'wbthomason/packer.nvim'
 
     -- ui

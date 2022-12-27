@@ -2,9 +2,9 @@ require('lualine').setup({
     options = {
         component_separators = '|',
         section_separators = '',
-        globalstatus = false
+        globalstatus = false,
     },
     sections = {
-        lualine_x = { 'filetype' }
-    }
+        lualine_x = { 'filetype' },
+    },
 })
