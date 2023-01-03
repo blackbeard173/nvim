@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 local map = vim.keymap.set
 
 map("n", "<leader>e", vim.cmd.Ex)
+map("n", "<leader>l", ":Lazy<CR>")
 
 -- moves selected code block
 map("v", "J", ":m '>+1<CR>gv=gv")
