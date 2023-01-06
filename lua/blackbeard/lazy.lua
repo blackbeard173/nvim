@@ -10,26 +10,40 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- ui
-    'nyoom-engineering/oxocarbon.nvim',
+    -- 'nyoom-engineering/oxocarbon.nvim',
+    'sam4llis/nvim-tundra',
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
+        dependencies = { 'kyazdani42/nvim-web-devicons', },
     },
+    -- {
+    --     'gen740/SmoothCursor.nvim',
+    --     config = function()
+    --         require('smoothcursor').setup()
+    --     end,
+    -- },
 
     -- telescope
-    'nvim-lua/plenary.nvim',
-    { 'nvim-telescope/telescope.nvim', branch = '0.1.x' },
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    {
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            {
+                'nvim-telescope/telescope-fzf-native.nvim',
+                build = 'make',
+            },
+        },
+    },
 
     -- performance
     {
         'dstein64/vim-startuptime',
-        cmd = "StartupTime"
+        cmd = "StartupTime",
     },
     -- { 'lewis6991/impatient.nvim' },
 
     -- treesitter
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate', },
 
     --
     -- { 'theprimeagen/harpoon' },
@@ -60,5 +74,5 @@ require("lazy").setup({
     },
 
     -- comments
-    { 'numToStr/Comment.nvim' },
+    { 'numToStr/Comment.nvim', },
 })
