@@ -25,10 +25,17 @@ require("lazy").setup({
 	-- ui
 	-- 	colorschemes
 	'folke/tokyonight.nvim',
+	--	dashboard
+	{
+		'goolord/alpha-nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+	},
+
 })
 
 require("user.options")
 require("user.keymaps")
 require("user.colors")
 -- plugins
+require("user.plugins.alpha")
 require("user.plugins.treesitter")
