@@ -14,3 +14,5 @@ treesitter.setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+-- require 'treesitter-context'.setup() --Fixme: not working
