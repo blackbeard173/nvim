@@ -15,6 +15,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- basics
+	-- 	treesitter
+	{
+		'nvim-treesitter/nvim-treesitter',
+		build = ':TSUpdate',
+	},
+
 	-- ui
 	-- 	colorschemes
 	'folke/tokyonight.nvim',
@@ -23,3 +30,5 @@ require("lazy").setup({
 require("user.options")
 require("user.keymaps")
 require("user.colors")
+-- plugins
+require("user.plugins.treesitter")
