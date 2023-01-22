@@ -31,6 +31,12 @@ require("lazy").setup({
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
 	},
 
+	-- performance
+	{
+		"dstein64/vim-startuptime",
+		-- lazy-load on a command
+		cmd = "StartupTime",
+	},
 })
 
 require("user.options")
