@@ -64,6 +64,8 @@ require("lazy").setup({
 		"dstein64/vim-startuptime",
 		cmd = "StartupTime",
 	},
+
+	'Exafunction/codeium.vim',
 })
 
 require("user.options")
