@@ -19,7 +19,7 @@ require("lazy").setup({
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
     },
-    -- 'nvim-treesitter/nvim-treesitter-context', -- Fixme: not working
+    'nvim-treesitter/nvim-treesitter-context',
     {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',

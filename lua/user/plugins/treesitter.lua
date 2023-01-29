@@ -1,6 +1,6 @@
-local present, treesitter = pcall(require, "nvim-treesitter.configs")
+local treesitter_status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 
-if not present then
+if not treesitter_status_ok then
     print("Error in treesitter config")
     return
 end
@@ -15,4 +15,7 @@ treesitter.setup {
     },
 }
 
--- require 'treesitter-context'.setup() --Fixme: not working
+local context_status_ok, tscontext = pcall(require, "treesitter-context")
+if context_status_ok then
+    tscontext.setup({})
+end
