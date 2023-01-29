@@ -8,21 +8,18 @@ if not vim.loop.fs_stat(lazypath) then
         "clone",
         "--filter=blob:none",
         "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
+        "--branch=stable",
         lazypath,
     })
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- basics
-    -- 	treesitter
     {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
     },
     -- 'nvim-treesitter/nvim-treesitter-context', -- Fixme: not working
-    --  telescope
     {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
@@ -35,11 +32,9 @@ require("lazy").setup({
         build = 'make',
     },
     'nvim-telescope/telescope-file-browser.nvim',
-    -- ui
     -- 	colorschemes
     'folke/tokyonight.nvim',
     -- 'nyoom-engineering/oxocarbon.nvim',
-    --	dashboard
     {
         'goolord/alpha-nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -48,8 +43,6 @@ require("lazy").setup({
         "folke/twilight.nvim",
         cmd = "Twilight",
     },
-
-    -- lsp
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -70,8 +63,6 @@ require("lazy").setup({
             { 'rafamadriz/friendly-snippets' }, -- Optional
         },
     },
-
-    -- performance
     {
         "dstein64/vim-startuptime",
         cmd = "StartupTime",
