@@ -69,6 +69,11 @@ require("lazy").setup({
     },
     'numToStr/Comment.nvim',
     'Exafunction/codeium.vim',
+    {
+        'folke/which-key.nvim',
+        event = "VeryLazy",
+    }
+
 })
 
 require("user.options")
@@ -81,3 +86,4 @@ require("user.plugins.lsp")
 require("user.plugins.telescope")
 require("user.plugins.treesitter")
 require("user.plugins.twilight")
+require("user.plugins.whichkey")
