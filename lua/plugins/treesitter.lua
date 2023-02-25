@@ -19,13 +19,15 @@ return {
                     additional_vim_regex_highlighting = false,
                 },
             }
-
+        end,
+    },
+    {
+        'nvim-treesitter/nvim-treesitter-context',
+        config = function()
             local context_status_ok, tscontext = pcall(require, "treesitter-context")
             if context_status_ok then
                 tscontext.setup({})
             end
-        end, },
-    {
-        'nvim-treesitter/nvim-treesitter-context',
-    }
+        end
+    },
 }

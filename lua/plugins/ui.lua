@@ -1,13 +1,11 @@
 return {
     {
-
-        "folke/tokyonight.nvim",
+        'nyoom-engineering/oxocarbon.nvim',
+        -- "folke/tokyonight.nvim",
         config = function()
-            vim.cmd([[colorscheme tokyonight]])
+            vim.cmd([[colorscheme oxocarbon]])
         end
     },
-    -- 'nyoom-engineering/oxocarbon.nvim',
-
     {
         'akinsho/bufferline.nvim',
         version = "v3.*",
@@ -17,5 +15,13 @@ return {
         config = function()
             require("bufferline").setup {}
         end
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim', 'rebelot/kanagawa.nvim',
+        },
+        config = true,
     }
 }
