@@ -17,4 +17,21 @@ vim.opt.rtp:prepend(lazypath)
 require("core.options")
 require("core.keymaps")
 
-require("lazy").setup("plugins")
+local opts = {
+    performance = {
+        rtp = {
+            disabled_plugins = {
+                "gzip",
+                "matchit",
+                "matchparen",
+                "netrwPlugin",
+                "tarPlugin",
+                "tohtml",
+                "tutor",
+                "zipPlugin",
+            },
+        },
+    },
+}
+
+require("lazy").setup("plugins", opts)
