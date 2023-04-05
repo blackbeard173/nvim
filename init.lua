@@ -27,9 +27,15 @@ local plugins = {
 		keys = { 
 			{ "<leader>f","<cmd>Telescope find_files<cr>", desc = "Find Files" }
 		}
-
 	},
-	{"nvim-lua/plenary.nvim"}
+	{
+		"echasnovski/mini.comment",
+		event = "VeryLazy",
+		config = function(_, opts)
+			require("mini.comment").setup(opts)
+		end,
+	},
+	{"nvim-lua/plenary.nvim"},
 }
 local opts = {
 	ui = {
