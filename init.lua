@@ -16,6 +16,11 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 	{"nyoom-engineering/oxocarbon.nvim"},
 	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		event = { "BufReadPost", "BufNewFile" },
+	},
+	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		cmd = "Telescope",
@@ -43,3 +48,4 @@ vim.opt.background = "dark"
 vim.cmd.colorscheme "oxocarbon"
 
 vim.keymap.set("n","<leader>l", "<cmd>Lazy<cr>",{desc = "Lazy"})
+vim.keymap.set("n","<leader>,", "<cmd>e $MYVIMRC<cr>",{desc = "config"})
