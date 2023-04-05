@@ -75,6 +75,16 @@ local plugins = {
 			require("mini.statusline").setup(opts)
 		end,
 	},
+	{
+		"akinsho/toggleterm.nvim",
+		opts = {
+			open_mapping = [[<c-t>]],
+			direction = "float",
+		},
+		config = function(_, opts)
+			require("toggleterm").setup(opts)
+		end,
+	},
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{"nvim-lua/plenary.nvim",lazy = true},
 }
