@@ -40,7 +40,15 @@ local plugins = {
 			require("mini.comment").setup(opts)
 		end,
 	},
-	{"nvim-lua/plenary.nvim"},
+	{
+		"echasnovski/mini.trailspace",
+		-- :lua MiniTrailspace.trim()
+		-- :lua MiniTrailspace.trim_last_lines()
+		config = function(_, opts)
+			require("mini.trailspace").setup(opts)
+		end,
+	},
+	{"nvim-lua/plenary.nvim",lazy = true},
 }
 local opts = {
 	ui = {
