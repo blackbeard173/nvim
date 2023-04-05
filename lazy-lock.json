@@ -1,8 +1,14 @@
 {
   "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
   "mini.comment": { "branch": "main", "commit": "9ead47cef4266efa5145808b838762c658b74f74" },
-  "nvim-treesitter": { "branch": "master", "commit": "871f5665d92d59a369cf916e9aa4d321d466f1e3" },
+  "mini.indentscope": { "branch": "main", "commit": "43f6761c9a3e397b7c12b3c72f678bcf61efcfcf" },
+  "mini.pairs": { "branch": "main", "commit": "771c08bd313614c7e9a1904d277ac76eb226f674" },
+  "mini.statusline": { "branch": "main", "commit": "8346a03b025647acf40c0b8dd32c0bdb9dd6f8d9" },
+  "mini.trailspace": { "branch": "main", "commit": "37b6517750353fb53b546494093461ccc319a7f4" },
+  "nvim-treesitter": { "branch": "master", "commit": "411e771d511442ab81670701f5c830f6c74aadd7" },
+  "nvim-web-devicons": { "branch": "master", "commit": "0568104bf8d0c3ab16395433fcc5c1638efc25d4" },
   "oxocarbon.nvim": { "branch": "main", "commit": "be12ad8a9607a195d0fc081af0bf3cd38b095d12" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
-  "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" }
+  "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
+  "toggleterm.nvim": { "branch": "main", "commit": "b86982429325112d2b20c6d0cc7a5c4b182ab705" }
 }

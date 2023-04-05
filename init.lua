@@ -26,7 +26,7 @@ local plugins = {
 			{ "<leader>f","<cmd>Telescope find_files<cr>", desc = "Find Files" }
 		}
 	},
-	{ 
+	{
 		"echasnovski/mini.pairs",
 		event = "VeryLazy",
 		config = function(_, opts)
@@ -69,6 +69,13 @@ local plugins = {
 			require("mini.trailspace").setup(opts)
 		end,
 	},
+	{ 
+		"echasnovski/mini.statusline",
+		config = function(_, opts)
+			require("mini.statusline").setup(opts)
+		end,
+	},
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{"nvim-lua/plenary.nvim",lazy = true},
 }
 local opts = {
