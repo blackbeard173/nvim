@@ -14,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	{"nyoom-engineering/oxocarbon.nvim"},
 }
 local opts = {
     ui = {
@@ -27,3 +28,6 @@ local opts = {
 vim.g.mapleader = " "
 
 require("lazy").setup(plugins, opts)
+
+vim.opt.background = "dark"
+vim.cmd.colorscheme "oxocarbon"
