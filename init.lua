@@ -1,15 +1,13 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system(
-	{
+	vim.fn.system({
 		"git",
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable",
 		lazypath
-	}
-	)
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -24,9 +22,16 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		cmd = "Telescope",
-		keys = { 
+		keys = {
 			{ "<leader>f","<cmd>Telescope find_files<cr>", desc = "Find Files" }
 		}
+	},
+	{ 
+		"echasnovski/mini.pairs",
+		event = "VeryLazy",
+		config = function(_, opts)
+			require("mini.pairs").setup(opts)
+		end,
 	},
 	{
 		"echasnovski/mini.comment",
