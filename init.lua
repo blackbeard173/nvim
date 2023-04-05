@@ -12,11 +12,20 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	{"nyoom-engineering/oxocarbon.nvim"},
+	{"nyoom-engineering/oxocarbon.nvim", lazy=true},
+	{"folke/tokyonight.nvim", lazy = true},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		event = { "BufReadPost", "BufNewFile" },
+		opts = {
+			auto_install = true,
+			highlight = { enable = true },
+		},
+		config = function(_, opts)
+			require'nvim-treesitter.configs'.setup(opts)
+		end,
+
 	},
 	{
 		"nvim-telescope/telescope.nvim",
@@ -69,7 +78,7 @@ local plugins = {
 			require("mini.trailspace").setup(opts)
 		end,
 	},
-	{ 
+	{
 		"echasnovski/mini.statusline",
 		config = function(_, opts)
 			require("mini.statusline").setup(opts)
@@ -80,6 +89,9 @@ local plugins = {
 		opts = {
 			open_mapping = [[<c-t>]],
 			direction = "float",
+			float_opts = {
+				border = "curved",
+			},
 		},
 		config = function(_, opts)
 			require("toggleterm").setup(opts)
@@ -102,7 +114,8 @@ vim.g.mapleader = " "
 require("lazy").setup(plugins, opts)
 
 vim.opt.background = "dark"
-vim.cmd.colorscheme "oxocarbon"
+vim.cmd.colorscheme "tokyonight"
+vim.opt.number = true
 
 vim.keymap.set("n","<leader>l", "<cmd>Lazy<cr>",{desc = "Lazy"})
 vim.keymap.set("n","<leader>,", "<cmd>e $MYVIMRC<cr>",{desc = "config"})
