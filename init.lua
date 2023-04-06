@@ -113,9 +113,7 @@ vim.g.mapleader = " "
 
 require("lazy").setup(plugins, opts)
 
-vim.opt.background = "dark"
-vim.cmd.colorscheme "tokyonight"
-vim.opt.number = true
+require("options")
+require("keymaps")
 
-vim.keymap.set("n","<leader>l", "<cmd>Lazy<cr>",{desc = "Lazy"})
-vim.keymap.set("n","<leader>,", "<cmd>e $MYVIMRC<cr>",{desc = "config"})
+vim.cmd.colorscheme("tokyonight")
