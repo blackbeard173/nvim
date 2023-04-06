@@ -6,14 +6,14 @@ if not vim.loop.fs_stat(lazypath) then
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable",
-		lazypath
+		lazypath,
 	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	{"nyoom-engineering/oxocarbon.nvim", lazy=true},
-	{"folke/tokyonight.nvim", lazy = true},
+	{ "nyoom-engineering/oxocarbon.nvim", lazy = true },
+	{ "folke/tokyonight.nvim", lazy = true },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -23,17 +23,24 @@ local plugins = {
 			highlight = { enable = true },
 		},
 		config = function(_, opts)
-			require'nvim-treesitter.configs'.setup(opts)
+			require("nvim-treesitter.configs").setup(opts)
 		end,
-
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		dependencies = {
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "make",
+			},
+		},
 		cmd = "Telescope",
 		keys = {
-			{ "<leader>f","<cmd>Telescope find_files<cr>", desc = "Find Files" }
-		}
+			{ "<leader>f", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+		},
+		config = function(_, opts)
+			require("telescope").load_extension("fzf")
+		end,
 	},
 	{
 		"echasnovski/mini.pairs",
@@ -98,7 +105,7 @@ local plugins = {
 		end,
 	},
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-	{"nvim-lua/plenary.nvim",lazy = true},
+	{ "nvim-lua/plenary.nvim", lazy = true },
 }
 local opts = {
 	ui = {
