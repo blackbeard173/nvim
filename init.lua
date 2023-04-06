@@ -92,6 +92,12 @@ local plugins = {
 		end,
 	},
 	{
+		"echasnovski/mini.move",
+		config = function(_, opts)
+			require("mini.move").setup(opts)
+		end,
+	},
+	{
 		"akinsho/toggleterm.nvim",
 		opts = {
 			open_mapping = [[<c-t>]],
