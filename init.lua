@@ -58,7 +58,6 @@ local plugins = {
 	},
 	{
 		"echasnovski/mini.indentscope",
-		version = false, -- wait till new 0.7.0 release to put it back on semver
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			-- symbol = "▏",
@@ -79,6 +78,7 @@ local plugins = {
 	},
 	{
 		"echasnovski/mini.trailspace",
+		event = "VeryLazy",
 		-- :lua MiniTrailspace.trim()
 		-- :lua MiniTrailspace.trim_last_lines()
 		config = function(_, opts)
@@ -93,8 +93,16 @@ local plugins = {
 	},
 	{
 		"echasnovski/mini.move",
+		event = "VeryLazy",
 		config = function(_, opts)
 			require("mini.move").setup(opts)
+		end,
+	},
+	{
+		"echasnovski/mini.completion",
+		event = "VeryLazy",
+		config = function(_, opts)
+			require("mini.completion").setup(opts)
 		end,
 	},
 	{
