@@ -118,6 +118,13 @@ local plugins = {
 			require("toggleterm").setup(opts)
 		end,
 	},
+	{
+		"folke/noice.nvim",
+		config = function(_, opts)
+			require("noice").setup(opts)
+		end,
+	},
+	{ "MunifTanjim/nui.nvim", lazy = true },
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{ "nvim-lua/plenary.nvim", lazy = true },
 }
