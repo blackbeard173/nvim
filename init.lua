@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	{ 'nyoom-engineering/oxocarbon.nvim', lazy = true },
-	{ 'folke/tokyonight.nvim', lazy = true },
+	{ 'folke/tokyonight.nvim' },
 	{
 		'nvim-treesitter/nvim-treesitter',
 		build = ':TSUpdate',
@@ -37,8 +37,10 @@ local plugins = {
 		cmd = 'Telescope',
 		keys = {
 			{ '<leader>f', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
+			{ '<leader>b', '<cmd>Telescope buffers<cr>', desc = 'Buffers' },
 		},
 		config = function(_, opts)
+			require('telescope').setup(opts)
 			require('telescope').load_extension('fzf')
 		end,
 	},
@@ -124,17 +126,21 @@ local plugins = {
 			require('noice').setup(opts)
 		end,
 	},
+	{
+		'folke/zen-mode.nvim',
+		dependencies = { 'folke/twilight.nvim' },
+		cmd = 'ZenMode',
+		config = function(_, opts)
+			require('zen-mode').setup(opts)
+		end,
+	},
 	{ 'MunifTanjim/nui.nvim', lazy = true },
 	{ 'nvim-tree/nvim-web-devicons', lazy = true },
 	{ 'nvim-lua/plenary.nvim', lazy = true },
 }
 local opts = {
-	ui = {
-		border = 'rounded',
-	},
-	checker = {
-		enabled = true,
-	},
+	ui = { border = 'rounded' },
+	checker = { enabled = true },
 }
 
 vim.g.mapleader = ' '
