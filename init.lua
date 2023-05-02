@@ -17,6 +17,7 @@ local plugins={
   {'folke/tokyonight.nvim'},
   {'nyoom-engineering/oxocarbon.nvim'},
 
+  {'nvim-telescope/telescope.nvim', dependencies={'nvim-lua/plenary.nvim'},},
 }
 local opts={
   ui={border="rounded",},
