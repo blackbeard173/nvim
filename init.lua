@@ -18,6 +18,9 @@ local plugins={
   {'nyoom-engineering/oxocarbon.nvim'},
 
   {'nvim-telescope/telescope.nvim', dependencies={'nvim-lua/plenary.nvim'},},
+  {'nvim-treesitter/nvim-treesitter', build=':TSUpdate',
+  opts={auto_install=true,highlight={enable=true}},
+  config=function(_,opts)require('nvim-treesitter.configs').setup(opts)end,},
 }
 local opts={
   ui={border="rounded",},
