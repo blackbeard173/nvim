@@ -32,3 +32,6 @@ vim.keymap.set('n', '<Leader>t<Space>', [[<CMD>%s/\s\+$//e<CR>]], {}) -- Trim tr
 -- settings
 local o = vim.o
 o.termguicolors = true
+
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
