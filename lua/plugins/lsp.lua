@@ -60,4 +60,5 @@ return {
 		end,
 	},
 	{ 'neovim/nvim-lspconfig' },
+	{ 'echasnovski/mini.completion', config = true },
 }

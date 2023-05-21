@@ -2,6 +2,7 @@ return {
 	-- ui
 	{ 'folke/tokyonight.nvim' },
 	{ 'nyoom-engineering/oxocarbon.nvim' },
+	{ 'nvim-tree/nvim-web-devicons' },
 
 	--
 	{
@@ -62,4 +63,5 @@ return {
 			require('mini.basics').setup(opts)
 		end,
 	},
+	{ 'echasnovski/mini.surround', config = true },
 }
