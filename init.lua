@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    -- ui
     { 'folke/tokyonight.nvim' },
     { 'nyoom-engineering/oxocarbon.nvim' },
 
@@ -28,18 +29,21 @@ local plugins = {
         end,
     },
 
+    -- mini plugins
     {
         'echasnovski/mini.statusline',
-        config = function(_, opts)
-            require('mini.statusline').setup(opts)
-        end,
+        --         config = function(_, opts)
+        --             require('mini.statusline').setup(opts)
+        --         end,
+        config = true,
     },
     {
         'echasnovski/mini.comment',
-        keys = { 'gc', 'gcc' },
-        config = function(_, opts)
-            require('mini.comment').setup(opts)
-        end,
+        -- keys = { 'gc', 'gcc' },
+        --         config = function(_, opts)
+        --             require('mini.comment').setup(opts)
+        --         end,
+        config = true,
     },
     {
         'echasnovski/mini.indentscope',
@@ -50,9 +54,10 @@ local plugins = {
     },
     {
         'echasnovski/mini.pairs',
-        config = function(_, opts)
-            require('mini.pairs').setup(opts)
-        end,
+        --         config = function(_, opts)
+        --             require('mini.pairs').setup(opts)
+        --         end,
+        config = true,
     },
     {
         'echasnovski/mini.basics',
@@ -78,7 +83,7 @@ vim.cmd.colorscheme('oxocarbon')
 
 -- keymaps
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')
-vim.keymap.set('n', '<leader>,', '<cmd>e $MYVIMRC<cr>')
+vim.keymap.set('n', '<leader>,', '<cmd>edit $MYVIMRC<cr>')
 vim.keymap.set('n', '<leader>e', vim.cmd.Lexplore)
 
 -- settings
