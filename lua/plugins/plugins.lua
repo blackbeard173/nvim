@@ -64,4 +64,5 @@ return {
 		end,
 	},
 	{ 'echasnovski/mini.surround', config = true },
+	{ 'Exafunction/codeium.vim' },
 }
