@@ -21,7 +21,7 @@ local opts = {
 
 require('lazy').setup('plugins', opts)
 
-vim.cmd.colorscheme('oxocarbon')
+vim.cmd.colorscheme('tokyonight-night')
 
 -- keymaps
 vim.keymap.set('n', '<leader>l', '<cmd>Lazy<cr>')

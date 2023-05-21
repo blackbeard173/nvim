@@ -62,9 +62,4 @@ return {
 			require('mini.basics').setup(opts)
 		end,
 	},
-
-	-- lsp
-	{ 'neovim/nvim-lspconfig' },
-	{ 'williamboman/mason.nvim', config = true },
-	{ 'williamboman/mason-lspconfig.nvim', config = true },
 }
