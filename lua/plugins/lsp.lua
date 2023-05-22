@@ -26,12 +26,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- Enable formatting on save
-vim.cmd([[
-augroup FormatOnSave
-	autocmd!
-  	autocmd BufWritePre * lua vim.lsp.buf.format({async = true})
-augroup END
-]])
+-- vim.cmd([[
+-- augroup FormatOnSave
+-- 	autocmd!
+--   	autocmd BufWritePre * lua vim.lsp.buf.format({async = true})
+-- augroup END
+-- ]])
 
 return {
 	{
@@ -84,7 +84,12 @@ return {
 							group = augroup,
 							buffer = bufnr,
 							callback = function()
-								vim.lsp.buf.format({ bufnr = bufnr })
+								vim.lsp.buf.format({
+									bufnr = bufnr,
+									filter = function(client)
+										return client.name == 'null-ls'
+									end,
+								})
 							end,
 						})
 					end
