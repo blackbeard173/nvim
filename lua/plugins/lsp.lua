@@ -25,6 +25,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end,
 })
 
+-- Enable formatting on save
+vim.cmd([[
+augroup FormatOnSave
+	autocmd!
+  	autocmd BufWritePre * lua vim.lsp.buf.format({async = true})
+augroup END
+]])
+
 return {
 	{
 		'williamboman/mason.nvim',
@@ -44,8 +52,7 @@ return {
 				function(server_name)
 					require('lspconfig')[server_name].setup({})
 				end,
-				-- handler override for the `lua_ls`:
-				['lua_ls'] = function()
+				['lua_ls'] = function() -- handler override for the `lua_ls`:
 					require('lspconfig').lua_ls.setup({
 						settings = {
 							Lua = {
@@ -61,4 +68,28 @@ return {
 	},
 	{ 'neovim/nvim-lspconfig' },
 	{ 'echasnovski/mini.completion', config = true },
+	{
+		'jose-elias-alvarez/null-ls.nvim',
+		config = function()
+			local null_ls = require('null-ls')
+			local formatting = null_ls.builtins.formatting
+			local sources = { formatting.stylua, formatting.prettier }
+			local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+			null_ls.setup({
+				sources = sources,
+				on_attach = function(client, bufnr)
+					if client.supports_method('textDocument/formatting') then
+						vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+						vim.api.nvim_create_autocmd('BufWritePre', {
+							group = augroup,
+							buffer = bufnr,
+							callback = function()
+								vim.lsp.buf.format({ bufnr = bufnr })
+							end,
+						})
+					end
+				end,
+			})
+		end,
+	},
 }

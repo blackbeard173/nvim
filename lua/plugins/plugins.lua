@@ -41,9 +41,9 @@ return {
 	{
 		'echasnovski/mini.indentscope',
 		opts = { symbol = '│' },
-		config = function(_, opts)
-			require('mini.indentscope').setup(opts)
-		end,
+		-- config = function(_, opts)
+		-- 	require('mini.indentscope').setup(opts)
+		-- end,
 	},
 	{
 		'echasnovski/mini.pairs',
@@ -59,11 +59,15 @@ return {
 			extra_ui = true,
 			win_borders = 'rounded',
 		},
-		config = function(_, opts)
-			require('mini.basics').setup(opts)
-		end,
+		-- config = function(_, opts)
+		-- 	require('mini.basics').setup(opts)
+		-- end,
 	},
 	{ 'echasnovski/mini.surround', config = true },
 	{ 'Exafunction/codeium.vim' },
-	{ 'stevearc/oil.nvim', opts = {}, dependencies = { 'nvim-tree/nvim-web-devicons' } },
+	{
+		'stevearc/oil.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		config = true,
+	},
 }
