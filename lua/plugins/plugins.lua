@@ -25,13 +25,6 @@ return {
 
 	-- mini plugins
 	{
-		'echasnovski/mini.statusline',
-		--         config = function(_, opts)
-		--             require('mini.statusline').setup(opts)
-		--         end,
-		config = true,
-	},
-	{
 		'echasnovski/mini.comment',
 		-- keys = { 'gc', 'gcc' },
 		--         config = function(_, opts)
