@@ -32,15 +32,6 @@ return {
 			{ '<leader>p', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
 		},
 	},
-	{
-		'nvim-treesitter/nvim-treesitter',
-		build = ':TSUpdate',
-		opts = { auto_install = true, highlight = { enable = true }, indent = { enable = true } },
-		config = function(_, opts)
-			require('nvim-treesitter.configs').setup(opts)
-		end,
-	},
-
 	-- mini plugins
 	{
 		'echasnovski/mini.statusline',
