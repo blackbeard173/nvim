@@ -84,9 +84,4 @@ return {
 	},
 	{ 'echasnovski/mini.surround', config = true },
 	{ 'Exafunction/codeium.vim' },
-	{
-		'stevearc/oil.nvim',
-		dependencies = { 'nvim-tree/nvim-web-devicons' },
-		config = true,
-	},
 }
