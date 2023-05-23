@@ -1,7 +1,7 @@
 return {
 	-- ui
 	{ 'folke/tokyonight.nvim' },
-	{ 'nyoom-engineering/oxocarbon.nvim' },
+	{ 'nyoom-engineering/oxocarbon.nvim', lazy = true },
 	{ 'nvim-tree/nvim-web-devicons' },
 	{
 		'folke/noice.nvim',
