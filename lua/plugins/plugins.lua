@@ -3,7 +3,7 @@ return {
 	{ 'nvim-tree/nvim-web-devicons' },
 	{
 		'folke/noice.nvim',
-		-- event = 'VeryLazy',
+		event = 'VeryLazy',
 		opts = {
 			lsp = {
 				override = {
@@ -27,23 +27,14 @@ return {
 	{
 		'echasnovski/mini.comment',
 		-- keys = { 'gc', 'gcc' },
-		--         config = function(_, opts)
-		--             require('mini.comment').setup(opts)
-		--         end,
 		config = true,
 	},
 	{
 		'echasnovski/mini.indentscope',
 		opts = { symbol = '│' },
-		-- config = function(_, opts)
-		-- 	require('mini.indentscope').setup(opts)
-		-- end,
 	},
 	{
 		'echasnovski/mini.pairs',
-		--         config = function(_, opts)
-		--             require('mini.pairs').setup(opts)
-		--         end,
 		config = true,
 	},
 	{
@@ -53,9 +44,6 @@ return {
 			extra_ui = true,
 			win_borders = 'rounded',
 		},
-		-- config = function(_, opts)
-		-- 	require('mini.basics').setup(opts)
-		-- end,
 	},
 	{ 'echasnovski/mini.surround', config = true },
 }
