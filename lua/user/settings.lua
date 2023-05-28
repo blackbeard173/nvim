@@ -1,5 +1,3 @@
--- Editor Settings
-
 local o = vim.opt
 o.number = true
 o.mouse = 'a'
