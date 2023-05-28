@@ -16,5 +16,4 @@ local opts = {
 	checker = { enabled = false },
 }
 
-vim.g.mapleader = ' '
-require('lazy').setup({}, opts)
+require('lazy').setup({ import = 'plugins' }, opts)
