@@ -39,6 +39,7 @@ return {
 	},
 	{
 		'echasnovski/mini.basics',
+		enabled = false,
 		opts = {
 			basic = true,
 			extra_ui = true,
