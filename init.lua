@@ -3,4 +3,4 @@ require('user.keymaps')
 require('user.commands')
 require('user.lazy')
 
-vim.cmd.colorscheme('tokyonight-night')
+pcall(vim.cmd.colorscheme('tokyonight'))
