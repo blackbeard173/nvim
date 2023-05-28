@@ -14,6 +14,7 @@ o.smartindent=true
 o.autoindent=true
 o.signcolumn='auto'
 o.termguicolors=true
+o.cmdheight=0
 
 local g=vim.g
 g.netrw_banner=0
