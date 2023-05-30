@@ -11,8 +11,12 @@ return {
 		},
 		config = function()
 			local cmp = require('cmp')
+			local lspkind = require('lspkind')
 			require('luasnip.loaders.from_vscode').lazy_load()
 			cmp.setup({
+				formatting = {
+					format = lspkind.cmp_format(),
+				},
 				snippet = {
 					expand = function(args)
 						require('luasnip').lsp_expand(args.body)
