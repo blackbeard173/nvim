@@ -15,9 +15,7 @@ return {
 			require('luasnip.loaders.from_vscode').lazy_load()
 			cmp.setup({
 				formatting = {
-					format = lspkind.cmp_format({
-						symbol_map = { Codeium = '' },
-					}),
+					format = lspkind.cmp_format(),
 				},
 				snippet = {
 					expand = function(args)
@@ -34,7 +32,6 @@ return {
 				sources = cmp.config.sources({
 					{ name = 'nvim_lsp' },
 					{ name = 'luasnip' },
-					{ name = 'codeium' },
 				}, {
 					{ name = 'buffer' },
 				}),
