@@ -1,5 +1,6 @@
 local o = vim.opt
 o.number = true
+o.clipboard = 'unnamedplus'
 o.mouse = 'a'
 o.ignorecase = true
 o.smartcase = true

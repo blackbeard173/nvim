@@ -1,4 +1,5 @@
 return {
-	{ 'folke/tokyonight.nvim' },
+	{ 'folke/tokyonight.nvim', lazy = true },
 	{ 'nyoom-engineering/oxocarbon.nvim', lazy = true },
+	{ 'catppuccin/nvim', name = 'catppuccin' },
 }
