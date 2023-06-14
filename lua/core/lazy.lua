@@ -9,6 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
@@ -16,4 +17,4 @@ local opts = {
 	checker = { enabled = false },
 }
 
-require('lazy').setup({ import = 'plugins' }, opts)
+require('lazy').setup('plugins', opts)

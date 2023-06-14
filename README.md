@@ -15,7 +15,7 @@ git clone git@github.com:blackbeard173/nvim.git
 ```
 ~/.config/nvim
 ├── lua
-│   ├── config
+│   ├── core
 │   │   ├── autocmds.lua
 │   │   ├── keymaps.lua
 │   │   ├── lazy.lua

@@ -1,6 +1,4 @@
-require('user.settings')
-require('user.keymaps')
-require('user.commands')
-require('user.lazy')
-
-vim.cmd.colorscheme('catppuccin')
+require('core.settings')
+require('core.keymaps')
+require('core.commands')
+require('core.lazy')

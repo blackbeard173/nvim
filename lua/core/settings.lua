@@ -1,20 +1,21 @@
 local o = vim.opt
-o.number = true
-o.clipboard = 'unnamedplus'
+
 o.mouse = 'a'
+o.clipboard = 'unnamedplus'
+o.number = true
+o.termguicolors = true
+o.colorcolumn = '120'
 o.ignorecase = true
 o.smartcase = true
 o.hlsearch = true
 o.wrap = true
-o.breakindent = true
 o.tabstop = 2
-o.shiftwidth = 2
 o.smartindent = true
 o.autoindent = true
 o.signcolumn = 'auto'
-o.termguicolors = true
-o.cmdheight = 0
 o.cursorline = true
+o.shiftwidth = 2
+o.breakindent = true
 
 local g = vim.g
 g.netrw_banner = 0
