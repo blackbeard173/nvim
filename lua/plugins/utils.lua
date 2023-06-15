@@ -3,6 +3,7 @@ return {
 	{ 'nvim-tree/nvim-web-devicons', lazy = true },
 	{
 		'dstein64/vim-startuptime',
+		enabled = false,
 		cmd = 'StartupTime',
 		config = function()
 			vim.g.startuptime_tries = 30
