@@ -16,13 +16,13 @@ git clone git@github.com:blackbeard173/nvim.git
 ~/.config/nvim
 ├── lua
 │   ├── core
-│   │   ├── autocmds.lua
+│   │   ├── commands.lua
 │   │   ├── keymaps.lua
 │   │   ├── lazy.lua
-│   │   └── options.lua
+│   │   └── settings.lua
 │   └── plugins
-│       ├── plugin1.lua
+│       ├── plugin-config-1.lua
 │       ├── **
-│       └── pluginN.lua
+│       └── plugin-config-n.lua
 └── init.lua
 ```
