@@ -1,10 +1,8 @@
-return {
-	{
-		'nvim-telescope/telescope.nvim',
-		cmd = 'Telescope',
-		keys = {
-			{ '<leader>p', '<cmd>Telescope find_files<cr>', desc = 'Find Files' },
-			{ '<leader>tg', '<cmd>Telescope live_grep<cr>', desc = 'Live Grep' },
+require('telescope').setup({
+	extensions = {
+		['ui-select'] = {
+			require('telescope.themes').get_dropdown({}),
 		},
 	},
-}
+})
+require('telescope').load_extension('ui-select')
