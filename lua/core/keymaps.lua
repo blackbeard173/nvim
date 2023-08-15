@@ -1,9 +1,0 @@
-local map = vim.keymap.set
-map('n', '<C-s>', '<cmd>w<cr>', { desc = 'Write' })
-map('n', '<leader>,', '<cmd>e $MYVIMRC<cr>', { desc = 'Config' })
-map('n', '<leader><Tab>', '<cmd>buffer #<cr>', { desc = 'Switch to previous buffer' })
-map('n', '<leader><space>', '<cmd>buffers<cr>:buffer<Space>', { desc = 'Open Buffers' })
-map('n', '<leader>e', '<cmd>Lexplore!<cr>', { desc = 'Explorer' })
-map('n', '<leader>f', '<cmd>Format<cr>', { desc = 'Format' })
-map('n', '<leader>l', '<cmd>Lazy<cr>', { desc = 'Lazy' })
-map('n', '<leader>q', '<cmd>bdelete<cr>', { desc = 'Close buffer' })
